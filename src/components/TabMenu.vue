@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="header-bar">
+    <h1 class="icon"><img src="../assets/icon.png"></h1>
     <ol>
       <li v-for="(item, index) in items" :key=index>
          <router-link v-bind:to=item.path>
@@ -28,6 +29,14 @@ export default {
 
 <style scoped>
 
+.icon {
+  margin: 10px 0px;
+}
+
+.header-bar {
+  display:flex;
+}
+
 ol {
   margin-left: auto;
   width: 480px;
@@ -43,7 +52,7 @@ li {
   margin-left:10px;
   margin-right:10px;
   font-size: 14px;
-  background-color: skyblue;
+  background-color: blue;
   border-radius: 8px;
   position: relative;
 }
